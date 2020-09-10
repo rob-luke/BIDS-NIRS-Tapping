@@ -6,10 +6,11 @@ Example NIRS BIDS dataset
 
 ## Experiment Description
 
-
+...
 
 ## Data Description
 
+...
 
 
 ## How to use this repository
