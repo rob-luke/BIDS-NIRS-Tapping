@@ -18,6 +18,6 @@ I have used branches in this repository to describe the steps taken to convert t
 Using the GitHub interface you can select the branch you wish to view.
 The branches are...
 
-* 00-Raw
-* 01-Raw-to-SNIRF
+* [00-Raw-data](https://github.com/rob-luke/BIDS-NIRS-Tapping/tree/00-Raw-data)
+* [01-Raw-to-SNIRF](https://github.com/rob-luke/BIDS-NIRS-Tapping/tree/01-Raw-to-SNIRF)
 * 02-
