@@ -18,6 +18,7 @@ I have used branches in this repository to describe the steps taken to convert t
 Using the GitHub interface you can select the branch you wish to view.
 The branches are...
 
-* [00-Raw-data](https://github.com/rob-luke/BIDS-NIRS-Tapping/tree/00-Raw-data)
-* [01-Raw-to-SNIRF](https://github.com/rob-luke/BIDS-NIRS-Tapping/tree/01-Raw-to-SNIRF)
-* 02-
+* [00-Raw-data](https://github.com/rob-luke/BIDS-NIRS-Tapping/tree/00-Raw-data): Contains just the raw recordings
+* [01-Raw-to-SNIRF](https://github.com/rob-luke/BIDS-NIRS-Tapping/tree/01-Raw-to-SNIRF): Converts the original data to snirf, but not BIDS.
+* [02-Raw-to-BIDS](https://github.com/rob-luke/BIDS-NIRS-Tapping/tree/02-Raw-to-BIDS): Converts the original data to BIDS.
+* master: Dataset in BIDS format.
