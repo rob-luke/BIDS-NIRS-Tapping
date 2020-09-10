@@ -21,6 +21,6 @@ The branches are...
 
 * [00-Raw-data](https://github.com/rob-luke/BIDS-NIRS-Tapping/tree/00-Raw-data): Contains just the raw recordings
 * [01-Raw-to-SNIRF](https://github.com/rob-luke/BIDS-NIRS-Tapping/tree/01-Raw-to-SNIRF): Converts the original data to snirf, but not BIDS.
-* [02-Raw-to-BIDS](https://github.com/rob-luke/BIDS-NIRS-Tapping/tree/02-Raw-to-BIDS): Converts the original data to BIDS.
+* [02-Raw-to-BIDS](https://github.com/rob-luke/BIDS-NIRS-Tapping/tree/02-Raw-to-BIDS): Converts the original data to BIDS (or as close as can be automated for now, before manual editing and movement to master).
 * [master](https://github.com/rob-luke/BIDS-NIRS-Tapping): Dataset in BIDS format.
 
