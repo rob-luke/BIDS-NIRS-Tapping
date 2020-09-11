@@ -6,11 +6,17 @@ Example NIRS BIDS dataset
 
 ## Experiment Description
 
+**TODO: Fill in description**
+
+The code to complete the experiment is here... https://github.com/rob-luke/experiment-fNIRS-tapping
+
 
 
 ## Data Description
 
 
+
+**TODO: Fill in description**
 
 ## How to use this repository
 
