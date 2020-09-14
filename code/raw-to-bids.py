@@ -1,7 +1,7 @@
 import os
 import mne
 from mne_nirs.io.snirf import write_raw_snirf
-from mne_bids import (write_raw_bids, BIDSPath, print_dir_tree)
+from mne_bids import write_raw_bids, BIDSPath, print_dir_tree
 
 
 # Loop over each participant
