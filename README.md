@@ -2,7 +2,7 @@
 
 Example NIRS BIDS dataset
 
-**The NIRS BIDS specification is a work in progress. This repository will change while the BEP is in developement.**
+**The NIRS BIDS specification is a work in progress. Expect changes while the BEP is in developement.**
 
 ## Experiment Description
 
