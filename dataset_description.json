@@ -1,6 +1,8 @@
 {
-    "Name": "Tapping",
+    "Name": " ",
     "BIDSVersion": "1.4.0",
     "DatasetType": "raw",
-    "Authors": ["Robert Luke"]
+    "Authors": [
+        "Robert Luke", "Second Author"
+    ]
 }
