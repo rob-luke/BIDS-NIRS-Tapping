@@ -1,8 +1,8 @@
 {
     "Name": " ",
-    "BIDSVersion": "1.4.0",
+    "BIDSVersion": "1.6.0",
     "DatasetType": "raw",
     "Authors": [
-        "Robert Luke", "Second Author"
+        "[Unspecified]"
     ]
 }
