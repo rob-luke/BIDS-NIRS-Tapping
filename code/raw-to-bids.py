@@ -4,8 +4,9 @@ import mne
 from mne_nirs.io.snirf import write_raw_snirf
 from mne_bids import write_raw_bids, BIDSPath, print_dir_tree
 
-trial_type = {'Control': 1, 'Tapping/Left': 2,
-              'Tapping/Right': 3, 'ExperimentEnds': 15}
+# There are the values you are likely to need to change
+event_codes = {'1.0': 1, '15.0': 15, '2.0': 2, '3.0': 3}
+trial_type = {1: 'Control', 2: 'Tapping/Left', 3: 'Tapping/Right', 4: 'ExperimentEnds'}
 stimulus_duration = 5
 
 # Loop over each participant
@@ -27,12 +28,16 @@ for sub in range(1, 6):
 
     # Read source data
     raw = mne.io.read_raw_snirf(snirf_path, preload=False)
+
+    # Set the annotations up correctly. This is currently a bit hacky
+    events, event_id = mne.events_from_annotations(raw, event_codes)
+    raw.set_annotations(mne.annotations_from_events(events, raw.info['sfreq'],
+                                                    event_desc=trial_type))
     raw.annotations.duration = np.ones(raw.annotations.duration.shape) * \
                                stimulus_duration
-    raw.info['line_freq'] = 50  # specify line frequency as required by BIDS
-    events, event_id = mne.events_from_annotations(raw,
-                                                   {'1.0': 1, '15.0': 15,
-                                                    '2.0': 2, '3.0': 3})
+
+    # specify line frequency as required by BIDS
+    raw.info['line_freq'] = 50
 
     bids_path = BIDSPath(subject=subject_id, task='tapping',
                          datatype='nirs', root='../')
