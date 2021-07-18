@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 # This script is to be run after raw_to_bids.py and it will ensure
 # that each file can be read after conversion to BIDS
 

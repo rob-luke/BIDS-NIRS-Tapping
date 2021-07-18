@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import os
 import numpy as np
 import mne
@@ -6,7 +8,8 @@ from mne_bids import write_raw_bids, BIDSPath, print_dir_tree
 
 # There are the values you are likely to need to change
 event_codes = {'1.0': 1, '15.0': 15, '2.0': 2, '3.0': 3}
-trial_type = {1: 'Control', 2: 'Tapping/Left', 3: 'Tapping/Right', 4: 'ExperimentEnds'}
+trial_type = {1: 'Control', 2: 'Tapping/Left', 3: 'Tapping/Right',
+              4: 'ExperimentEnds'}
 stimulus_duration = 5
 
 # Loop over each participant
@@ -14,16 +17,16 @@ for sub in range(1, 6):
     subject_id = "%02d" % sub
 
     # Find source data
-    bpath = BIDSPath(subject=subject_id, task='tapping', datatype='nirs',
-                     root='../sourcedata')
-    dname = str(bpath.directory)
-    fname = dname + "/" + next(os.walk(dname))[1][0]
+    b_path = BIDSPath(subject=subject_id, task='tapping', datatype='nirs',
+                      root='../sourcedata')
+    d_name = str(b_path.directory)
+    f_name = d_name + "/" + next(os.walk(d_name))[1][0]
 
     # Read source data
-    raw = mne.io.read_raw_nirx(fname, preload=False)
+    raw = mne.io.read_raw_nirx(f_name, preload=False)
 
     # Create BIDS path and write to file
-    snirf_path = dname + "/" + bpath.basename + ".snirf"
+    snirf_path = d_name + "/" + b_path.basename + ".snirf"
     write_raw_snirf(raw, snirf_path)
 
     # Read source data
@@ -42,3 +45,4 @@ for sub in range(1, 6):
     bids_path = BIDSPath(subject=subject_id, task='tapping',
                          datatype='nirs', root='../')
     write_raw_bids(raw, bids_path, overwrite=True)
+    os.remove(snirf_path)
