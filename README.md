@@ -1,5 +1,7 @@
 # BIDS fNIRS Example Dataset
 
+[![DOI](https://zenodo.org/badge/294376526.svg)](https://zenodo.org/badge/latestdoi/294376526)
+
 **The fNIRS BIDS specification is a work in progress. Expect changes while the BEP is in developement.**
 
 Example fNIRS dataset that is formated according to the [BIDS specification](https://bids-specification--802.org.readthedocs.build/en/802/03-modality-agnostic-files.html).
